@@ -40,11 +40,11 @@ class ArticlesController < ApplicationController
         @article.destroy
 
         # binding.pry
-        redirect_to articles_path   #why a path now?
+        redirect_to articles_path
     end
 
     private
     def article_params
-        params.require(:article).permit(:title, :body)
+        params.require(:article).permit(:title, :text)
     end
 end
